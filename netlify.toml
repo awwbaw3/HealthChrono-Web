@@ -1,0 +1,55 @@
+# netlify.toml
+# Build configuration for HealthChrono Web
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Production context (main branch - Live Production Website)
+[context.production]
+  command = "npm run build"
+
+# Branch deploy context (dev branch - Staging / Integration)
+[context.dev]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms-of-service"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/support"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/delete-account"
+  to = "/delete-data"
+  status = 301
+  force = true

@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Page Not Found | HealthChrono"
+  description="The page you are looking for does not exist on HealthChrono."
+>
+  <div class="py-24 bg-slate-50 min-h-[70vh] flex items-center">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="text-7xl font-extrabold text-emerald-600 font-heading mb-4">
+        404
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading tracking-tight mb-4">
+        Page Not Found
+      </h1>
+
+      <p class="text-slate-600 leading-relaxed mb-8">
+        We couldn't find the page you were looking for. It may have moved or been updated.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="/" 
+          class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md transition-all"
+        >
+          Return Home
+        </a>
+        <a 
+          href="/support" 
+          class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 transition-all"
+        >
+          Contact Support
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

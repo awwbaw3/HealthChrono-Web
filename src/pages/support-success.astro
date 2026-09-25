@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Support Request Received | HealthChrono"
+  description="Your support request has been submitted successfully to HealthChrono."
+>
+  <div class="py-24 bg-slate-50 min-h-[70vh] flex items-center">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-6 shadow-inner">
+        ✓
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading tracking-tight mb-4">
+        Support Request Received
+      </h1>
+
+      <p class="text-slate-600 leading-relaxed mb-6">
+        Thank you for contacting HealthChrono. Your inquiry has been forwarded directly to our support desk at <span class="font-semibold text-slate-900">info@drit.ninja</span>.
+      </p>
+
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm text-sm text-slate-600 text-left mb-8 space-y-2">
+        <p class="font-semibold text-slate-900">What happens next?</p>
+        <p>&bull; Our team reviews tickets in the order they are received.</p>
+        <p>&bull; We will respond to the email address you provided within 24–48 business hours.</p>
+        <p>&bull; If your inquiry is regarding a bug or app crash, we may request additional diagnostic details.</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="/" 
+          class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md transition-all"
+        >
+          Return to Homepage
+        </a>
+        <a 
+          href="/support" 
+          class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 transition-all"
+        >
+          Submit Another Inquiry
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

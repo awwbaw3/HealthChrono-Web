@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Account & Data Deletion | HealthChrono"
+  description="Step-by-step instructions for deleting your HealthChrono account and permanently erasing all local and cloud health data in compliance with Google Play and Apple App Store standards."
+>
+  <div class="bg-slate-900 text-white py-16 border-b border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-900/60 text-emerald-400 border border-emerald-500/30 mb-4">
+        Data Sovereignty & Privacy
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight font-heading">Account & Data Deletion</h1>
+      <p class="mt-3 text-slate-400 text-base max-w-2xl">
+        HealthChrono provides complete data ownership. You have the permanent right to delete your account, purge all symptom logs, and erase your cloud records at any time.
+      </p>
+    </div>
+  </div>
+
+  <div class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-slate max-w-none space-y-10 text-slate-700 leading-relaxed">
+        
+        <!-- Option 1: In-App Self-Service Deletion -->
+        <section class="border border-emerald-200 rounded-3xl p-8 bg-emerald-50/40">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-lg">
+              1
+            </span>
+            <h2 class="text-2xl font-bold text-slate-900 font-heading m-0">In-App Instant Account Deletion (Recommended)</h2>
+          </div>
+          <p class="text-sm text-slate-600 mb-6">
+            The fastest and most direct method to erase all data is directly inside the HealthChrono mobile application:
+          </p>
+          <ol class="list-decimal pl-6 space-y-3 text-sm text-slate-800 font-medium">
+            <li>Open the <strong>HealthChrono</strong> mobile app on your iPhone or Android device.</li>
+            <li>Tap the <strong>Settings</strong> tab in the bottom navigation bar.</li>
+            <li>Select <strong>Data Management</strong>.</li>
+            <li>Scroll to the bottom of the screen and tap <strong class="text-rose-600">Delete Account &amp; All Data</strong>.</li>
+            <li>Confirm the prompt. Your local database is wiped clean, and an automated purge signal is transmitted to erase your cloud account records immediately.</li>
+          </ol>
+        </section>
+
+        <!-- Option 2: Web / Email Deletion Request -->
+        <section class="border border-slate-200 rounded-3xl p-8 bg-slate-50">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-lg">
+              2
+            </span>
+            <h2 class="text-2xl font-bold text-slate-900 font-heading m-0">Web &amp; Email Deletion Request</h2>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">
+            If you have uninstalled the application or no longer have access to your mobile device, our support team can manually process your deletion request:
+          </p>
+          <div class="space-y-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 text-sm">
+              <p class="font-bold text-slate-900 mb-1">Email Our Data Protection Team:</p>
+              <p class="text-slate-600 mb-2">
+                Send an email from the address registered with your account to:
+              </p>
+              <a href="mailto:info@drit.ninja?subject=Account%20and%20Data%20Deletion%20Request" class="text-base font-bold text-emerald-600 hover:underline">
+                info@drit.ninja
+              </a>
+              <p class="text-xs text-slate-500 mt-2">
+                Subject line: <em>Account and Data Deletion Request</em><br />
+                Include your registered email address and confirmation that you wish to permanently purge all data.
+              </p>
+            </div>
+
+            <p class="text-xs text-slate-500">
+              Alternatively, you can submit our <a href="/support" class="text-emerald-600 font-semibold underline">Support Ticket Form</a> selecting the category "Account / Data Deletion Request".
+            </p>
+          </div>
+        </section>
+
+        <!-- What Happens Next / Retention Details -->
+        <section>
+          <h2 class="text-2xl font-bold text-slate-900 font-heading mb-4">What Data Is Erased vs. Retained?</h2>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 my-4">
+            <div class="border border-rose-100 bg-rose-50/50 rounded-2xl p-6">
+              <h3 class="text-base font-bold text-rose-900 mb-2 font-heading flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-rose-500 text-white flex items-center justify-center text-xs">✕</span>
+                Permanently Destroyed
+              </h3>
+              <ul class="text-xs text-rose-800 space-y-1.5 list-disc pl-4">
+                <li>All symptom logs, pain ratings, and trigger notes</li>
+                <li>All medication names, prescriptions, and reminder logs</li>
+                <li>All generated clinical PDF summaries and history</li>
+                <li>Account profile identifiers, authentication tokens, and user ID</li>
+                <li>Local SQLite / MMKV on-device encrypted storage</li>
+              </ul>
+            </div>
+
+            <div class="border border-slate-200 bg-slate-50 rounded-2xl p-6">
+              <h3 class="text-base font-bold text-slate-900 mb-2 font-heading flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-slate-700 text-white flex items-center justify-center text-xs">i</span>
+                Data Retained for Legal Compliance
+              </h3>
+              <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-4">
+                <li>Anonymized financial transaction records (required for legal and tax accounting by Apple / Google)</li>
+                <li>Non-identifiable server access logs (automatically rotated and deleted after 90 days)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Subscription Notice -->
+        <section class="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-sm text-amber-950">
+          <h3 class="font-bold text-amber-900 mb-1 flex items-center gap-2 font-heading">
+            ⚠️ Notice Regarding In-App Subscriptions
+          </h3>
+          <p>
+            Deleting your HealthChrono account does <strong>not</strong> automatically cancel active paid subscriptions processed by Apple or Google. Under Apple and Google store guidelines, users must cancel recurring subscriptions directly in their device settings:
+          </p>
+          <ul class="list-disc pl-5 mt-2 space-y-1 text-xs">
+            <li><strong>Apple iOS:</strong> Open device Settings &gt; Tap your Apple ID name &gt; Subscriptions &gt; Select HealthChrono &gt; Cancel Subscription.</li>
+            <li><strong>Google Android:</strong> Open Google Play Store &gt; Tap Profile &gt; Payments &amp; Subscriptions &gt; Subscriptions &gt; Select HealthChrono &gt; Cancel.</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</Layout>
