@@ -69,37 +69,37 @@ const socialImage = new URL(ogImage, siteUrl).href;
     </div>
 
     <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-          <!-- Logo & Brand -->
-          <a href="/" class="flex items-center gap-3 group">
-            <img src="/icon.png" alt="HealthChrono Logo" class="w-10 h-10 rounded-xl shadow-sm group-hover:scale-105 transition-transform" />
+        <div class="flex items-center justify-between h-20 gap-4 sm:gap-6">
+          <!-- Logo & Brand (Strictly unshrinkable) -->
+          <a href="/" class="flex items-center gap-3 group flex-shrink-0">
+            <img src="/icon.png" alt="HealthChrono Logo" class="w-10 h-10 rounded-xl shadow-sm group-hover:scale-105 transition-transform flex-shrink-0" />
             <div class="flex flex-col">
-              <span class="text-xl font-bold tracking-tight text-slate-900 font-heading">HealthChrono</span>
-              <span class="text-[10px] tracking-wider uppercase font-semibold text-emerald-600 -mt-1">Symptom Tracker</span>
+              <span class="text-xl font-bold tracking-tight text-slate-900 font-heading whitespace-nowrap">HealthChrono</span>
+              <span class="text-[10px] tracking-wider uppercase font-semibold text-emerald-600 -mt-1 whitespace-nowrap">Symptom Tracker</span>
             </div>
           </a>
 
-          <!-- Desktop Navigation -->
-          <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-            <a href="/#features" class="hover:text-emerald-600 transition-colors">Features</a>
-            <a href="/#clinical-reports" class="hover:text-emerald-600 transition-colors">Clinical Reports</a>
-            <a href="/#security" class="hover:text-emerald-600 transition-colors">Privacy & Security</a>
-            <a href="/#faq" class="hover:text-emerald-600 transition-colors">FAQ</a>
-            <a href="/support" class="hover:text-emerald-600 transition-colors">Support</a>
+          <!-- Desktop Navigation (lg+ with clean responsive gap and non-wrapping labels) -->
+          <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-slate-600 flex-shrink-0">
+            <a href="/#features" class="whitespace-nowrap hover:text-emerald-600 transition-colors">Features</a>
+            <a href="/#clinical-reports" class="whitespace-nowrap hover:text-emerald-600 transition-colors">Clinical Reports</a>
+            <a href="/#security" class="whitespace-nowrap hover:text-emerald-600 transition-colors">Privacy & Security</a>
+            <a href="/#faq" class="whitespace-nowrap hover:text-emerald-600 transition-colors">FAQ</a>
+            <a href="/support" class="whitespace-nowrap hover:text-emerald-600 transition-colors">Support</a>
           </nav>
 
-          <!-- Header Action Button -->
-          <div class="hidden md:flex items-center gap-4">
-            <a href="/#download" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm hover:shadow transition-all">
+          <!-- Header Action Button (Strictly unshrinkable) -->
+          <div class="hidden lg:flex items-center gap-4 flex-shrink-0">
+            <a href="/#download" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm hover:shadow transition-all whitespace-nowrap">
               Download App
             </a>
           </div>
 
-          <!-- Mobile Menu Button -->
-          <div class="flex md:hidden">
-            <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle navigation">
+          <!-- Mobile & Tablet Hamburger Toggle (Visible below lg) -->
+          <div class="flex lg:hidden flex-shrink-0">
+            <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500" aria-label="Toggle navigation">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
               </svg>
@@ -107,19 +107,19 @@ const socialImage = new URL(ogImage, siteUrl).href;
           </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden pb-6 pt-2 border-t border-slate-100">
-          <div class="flex flex-col gap-3 font-medium text-slate-600">
-            <a href="/#features" class="px-2 py-2 rounded-md hover:bg-slate-100 hover:text-emerald-600">Features</a>
-            <a href="/#clinical-reports" class="px-2 py-2 rounded-md hover:bg-slate-100 hover:text-emerald-600">Clinical Reports</a>
-            <a href="/#security" class="px-2 py-2 rounded-md hover:bg-slate-100 hover:text-emerald-600">Privacy & Security</a>
-            <a href="/#faq" class="px-2 py-2 rounded-md hover:bg-slate-100 hover:text-emerald-600">FAQ</a>
-            <a href="/support" class="px-2 py-2 rounded-md hover:bg-slate-100 hover:text-emerald-600">Support</a>
-            <a href="/privacy" class="px-2 py-2 rounded-md hover:bg-slate-100 hover:text-emerald-600">Privacy Policy</a>
-            <a href="/terms" class="px-2 py-2 rounded-md hover:bg-slate-100 hover:text-emerald-600">Terms of Service</a>
-            <a href="/delete-data" class="px-2 py-2 rounded-md hover:bg-slate-100 hover:text-emerald-600">Delete Account & Data</a>
+        <!-- Mobile & Tablet Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-3 border-t border-slate-100">
+          <div class="flex flex-col gap-2 font-medium text-slate-600">
+            <a href="/#features" class="px-3 py-2.5 rounded-xl hover:bg-slate-100 hover:text-emerald-600 transition-colors">Features</a>
+            <a href="/#clinical-reports" class="px-3 py-2.5 rounded-xl hover:bg-slate-100 hover:text-emerald-600 transition-colors">Clinical Reports</a>
+            <a href="/#security" class="px-3 py-2.5 rounded-xl hover:bg-slate-100 hover:text-emerald-600 transition-colors">Privacy & Security</a>
+            <a href="/#faq" class="px-3 py-2.5 rounded-xl hover:bg-slate-100 hover:text-emerald-600 transition-colors">FAQ</a>
+            <a href="/support" class="px-3 py-2.5 rounded-xl hover:bg-slate-100 hover:text-emerald-600 transition-colors">Support</a>
+            <a href="/privacy" class="px-3 py-2.5 rounded-xl hover:bg-slate-100 hover:text-emerald-600 transition-colors">Privacy Policy</a>
+            <a href="/terms" class="px-3 py-2.5 rounded-xl hover:bg-slate-100 hover:text-emerald-600 transition-colors">Terms of Service</a>
+            <a href="/delete-data" class="px-3 py-2.5 rounded-xl hover:bg-slate-100 hover:text-emerald-600 transition-colors">Delete Account & Data</a>
             <div class="pt-3">
-              <a href="/#download" class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-full text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700">
+              <a href="/#download" class="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm transition-all">
                 Download App
               </a>
             </div>
