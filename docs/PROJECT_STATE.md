@@ -17,7 +17,7 @@ last_observed_integration_commit: 7554fe007991ab564135191bf7cfb033a057c4bc
 last_observed_production_commit: 7554fe007991ab564135191bf7cfb033a057c4bc
 last_independently_verified_commit: null
 last_deployment_at: null
-updated_at: 2026-10-06T11:29:00-04:00
+updated_at: 2026-10-06T11:54:00-04:00
 updated_by: Ninja Dev Command Center onboarding
 implementation_status: complete
 verification_status: pending
@@ -65,6 +65,7 @@ Run a clean install and production build for the current `dev` head, then record
 
 - `npm ci`
 - `npm run build`
+- Triage the 17 dependency alerts reported by GitHub on the default branch (1 critical, 6 high, 6 moderate, and 4 low) before making a release-readiness claim.
 - Independent review of the current public deployment, if a deployment is intended to be treated as current.
 
 # Evidence
@@ -72,6 +73,7 @@ Run a clean install and production build for the current `dev` head, then record
 - Integration and production commit: `7554fe007991ab564135191bf7cfb033a057c4bc` — 2026-09-25.
 - Version: `package.json` reports `1.0.0`.
 - Deployment configuration: Astro Netlify adapter and `netlify.toml` are present; current deployment status and timestamp were not collected.
+- Security: GitHub reported 17 dependency alerts on the default branch during onboarding; exploitability and remediation status were not assessed.
 - Pull requests: none open at onboarding.
 
 # Resume Instructions
